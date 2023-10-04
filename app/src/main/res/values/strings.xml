@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">OnlineShop</string>
+
+
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="fasted_delivery">Fasted Delivery</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="easy_payment">Easy Payment</string>
+    <string name="login_here">Login Here</string>
+    <string name="welcome_back_to_shop_now">Welcome back to Shop Now</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="or_continue_with">Or continue with</string>
+    <string name="create_account">Create Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account</string>
+    <string name="favourite">Favourite</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+</resources>
