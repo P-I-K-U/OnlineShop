@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivitySignUpBinding
+import com.example.onlineshop.main.MainActivity
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -16,6 +17,11 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.alreadyAccBtn.setOnClickListener {
             startActivity(Intent(this,SignInActivity::class.java))
+        }
+
+        binding.signUpBtn.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finishAffinity()
         }
     }
 }
