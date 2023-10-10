@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.bottomnav.profilemanage.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white"
+            app:elevation="0dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:title="Profile"
+                app:titleCentered="true" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_below="@id/appBarLayout"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/avtar1"
+            app:civ_border_color="@color/primary_green"
+            app:civ_border_width="2dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/profile_image">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/person_icon"
+                    app:tint="@color/primary_green"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="@dimen/_165sdp"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_gravity="center"
+                    android:singleLine="true"
+                    android:lineSpacingMultiplier="1.8"
+                    android:ems="10"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/gender"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <TextView
+                    android:layout_width="@dimen/_165sdp"
+                    android:layout_height="wrap_content"
+                    android:text="User Gender"
+                    android:layout_gravity="center"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:lineSpacingMultiplier="1.8"
+                    android:ems="10"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/email_icon"
+                    app:tint="@color/primary_green"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="@dimen/_165sdp"
+                    android:layout_height="wrap_content"
+                    android:text="User Email"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:lineSpacingMultiplier="1.8"
+                    android:ems="10"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/phone_no_icon"
+                    app:tint="@color/primary_green"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/userPhone"
+                    android:layout_width="@dimen/_165sdp"
+                    android:layout_height="wrap_content"
+                    android:text="User Phone No."
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:lineSpacingMultiplier="1.8"
+                    android:ems="10"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/location_icon"
+                    app:tint="@color/primary_green"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/userAddress"
+                    android:layout_width="@dimen/_165sdp"
+                    android:layout_height="wrap_content"
+                    android:text="User Address"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:lineSpacingMultiplier="1.8"
+                    android:ems="10"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/credit_card_icon"
+                    app:tint="@color/primary_green"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/userCard"
+                    android:layout_width="@dimen/_165sdp"
+                    android:layout_height="wrap_content"
+                    android:text="User Credit Card"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:lineSpacingMultiplier="1.8"
+                    android:ems="10"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</ScrollView>
