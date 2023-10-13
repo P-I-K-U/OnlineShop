@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.FragmentCategoryBinding
 import com.example.onlineshop.main.bottomnav.category.adapter.CategoryParentAdapter
+import com.example.onlineshop.main.bottomnav.category.data.CategoryChildRvItems
+import com.example.onlineshop.main.bottomnav.category.data.CategoryParentRvItem
 
 class CategoryFragment : Fragment() {
 
@@ -25,11 +27,12 @@ class CategoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        // Parent RV Code....
         binding.parentRV.setHasFixedSize(true)
         addDataToParentRv()
         val parentAdapter = CategoryParentAdapter(parentRvList)
         binding.parentRV.adapter = parentAdapter
-        /*binding.parentRV.layoutManager = LinearLayoutManager(context)*/
 
     }
 

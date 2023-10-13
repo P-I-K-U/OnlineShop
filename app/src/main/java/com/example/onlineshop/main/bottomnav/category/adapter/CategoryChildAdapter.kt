@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.R
-import com.example.onlineshop.main.bottomnav.category.CategoryChildRvItems
+import com.example.onlineshop.main.bottomnav.category.data.CategoryChildRvItems
 
 class CategoryChildAdapter(private val childList: List<CategoryChildRvItems>) :
     RecyclerView.Adapter<CategoryChildAdapter.ChildViewHolder>() {

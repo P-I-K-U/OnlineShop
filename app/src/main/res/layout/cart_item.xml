@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageLayout"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        app:cardBackgroundColor="#57E8E8E8"
+        app:cardElevation="1dp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardCornerRadius="3dp"
+        >
+
+        <ImageView
+            android:id="@+id/cartProductImage"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/img1"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/cartProductName"
+        android:layout_width="@dimen/_190sdp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageLayout"
+        android:text="Product Name"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:fontFamily="@font/poppis_semibold"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:lineSpacingMultiplier="1.8"
+        android:layout_marginStart="@dimen/_5sdp" />
+
+    <ImageButton
+        android:id="@+id/deleteCart"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:src="@drawable/delete_icon"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:background="@android:color/transparent"
+        android:layout_toRightOf="@id/cartProductName"/>
+
+    <TextView
+        android:id="@+id/cartProductPrice"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textColor="@color/primary_green"
+        android:textSize="@dimen/_10ssp"
+        android:layout_below="@id/cartProductName"
+        android:fontFamily="@font/poppis_semibold"
+        android:drawableStart="@drawable/round_currency_rupee_24"
+        android:drawableTint="@color/primary_green"
+        android:layout_marginStart="@dimen/_45sdp"/>
+
+    <TextView
+        android:id="@+id/q"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qyt - "
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:textSize="@dimen/_8ssp"
+        android:layout_below="@id/deleteCart"
+        android:layout_marginStart="@dimen/_210sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="@dimen/_8ssp"
+        android:gravity="center"
+        android:layout_below="@id/deleteCart"
+        android:layout_toRightOf="@id/q"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+
+    <TextView
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_below="@id/q"
+        android:text="Checkout"
+        android:textColor="@color/primary_green"
+        android:fontFamily="@font/poppinsbold"
+        android:background="@drawable/custom_btn"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:layout_marginStart="@dimen/_70sdp"/>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
