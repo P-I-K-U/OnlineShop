@@ -1,4 +1,4 @@
-package com.example.onlineshop.main.bottomnav.category
+package com.example.onlineshop.main.bottomnav.category.data
 
 data class CategoryChildRvItems(
     val childTitle: String,
