@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".main.bottomnav.category.CategoryFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -18,9 +18,19 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:title="@string/category"
-            app:menu="@menu/toolbar_menu"/>
+            app:menu="@menu/toolbar_menu"
+            app:title="@string/category" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/parentRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/appBarLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </RelativeLayout>

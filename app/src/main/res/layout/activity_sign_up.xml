@@ -36,8 +36,6 @@
             android:textSize="@dimen/_20ssp" />
 
 
-
-
         <EditText
             android:id="@+id/email"
             android:layout_width="300dp"
@@ -95,7 +93,6 @@
             android:padding="@dimen/_5sdp"
             android:textSize="@dimen/_10ssp"
             android:textStyle="bold" />
-
 
 
         <com.google.android.material.button.MaterialButton

@@ -1,7 +1,7 @@
 package com.example.onlineshop.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivityMainBinding
@@ -19,18 +19,19 @@ class MainActivity : AppCompatActivity() {
 
         //default open home fragment
         replaceFragment(HomeFragment())
-     /*   binding.toolBar.title = "Shop Now"
-        binding.toolBar.menu
-        binding.toolBar.titleMarginStart = 30*/
+        /*   binding.toolBar.title = "Shop Now"
+           binding.toolBar.menu
+           binding.toolBar.titleMarginStart = 30*/
 
 
         binding.bottomNav.setOnItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
                 R.id.home ->
                     replaceFragment(HomeFragment())
 
                 R.id.category ->
                     replaceFragment(CategoryFragment())
+
                 R.id.cart ->
                     replaceFragment(CartFragment())
 
@@ -42,16 +43,14 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
     }
 
 
     // For Replacing the Fragment
-    fun replaceFragment(fragment: Fragment){
+    fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
-        val fragmentTransaction =fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame,fragment)
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame, fragment)
         fragmentTransaction.commit()
     }
 }
