@@ -1,60 +1,65 @@
 package com.example.onlineshop.main.bottomnav.category
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
+import com.example.onlineshop.databinding.FragmentCategoryBinding
+import com.example.onlineshop.main.bottomnav.category.adapter.CategoryParentAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CategoryFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CategoryFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentCategoryBinding
+    private val parentRvList = ArrayList<CategoryParentRvItem>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_category, container, false)
+    ): View {
+        binding = FragmentCategoryBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CategoryFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CategoryFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.parentRV.setHasFixedSize(true)
+        addDataToParentRv()
+        val parentAdapter = CategoryParentAdapter(parentRvList)
+        binding.parentRV.adapter = parentAdapter
+        /*binding.parentRV.layoutManager = LinearLayoutManager(context)*/
+
+    }
+
+
+    private fun addDataToParentRv() {
+
+        // List For Child Rv
+        val childItemMenList = ArrayList<CategoryChildRvItems>()
+        childItemMenList.add(CategoryChildRvItems("Shirt", R.drawable.man_shirt))
+        childItemMenList.add(CategoryChildRvItems("T-Shirt", R.drawable.man_tshirt))
+        childItemMenList.add(CategoryChildRvItems("Shoes", R.drawable.man_shoe))
+        childItemMenList.add(CategoryChildRvItems("Pants", R.drawable.men_pants))
+
+        val childItemWomenList = ArrayList<CategoryChildRvItems>()
+        childItemWomenList.add(CategoryChildRvItems("Dress", R.drawable.women_dress))
+        childItemWomenList.add(CategoryChildRvItems("T-Shirt", R.drawable.women_tshirt))
+        childItemWomenList.add(CategoryChildRvItems("High Heals", R.drawable.high_heals))
+        childItemWomenList.add(CategoryChildRvItems("Pants", R.drawable.women_pants))
+        childItemWomenList.add(CategoryChildRvItems("Bags", R.drawable.women_bag))
+
+        val childItemHomeDecList = ArrayList<CategoryChildRvItems>()
+        childItemHomeDecList.add(CategoryChildRvItems("Curtains", R.drawable.curtains))
+        childItemHomeDecList.add(CategoryChildRvItems("Lights", R.drawable.lights))
+        childItemHomeDecList.add(CategoryChildRvItems("Lamps", R.drawable.lamp))
+
+        //List for Parent RV
+        parentRvList.add(CategoryParentRvItem("Men", childItemMenList))
+        parentRvList.add(CategoryParentRvItem("Women",childItemWomenList))
+        parentRvList.add(CategoryParentRvItem("Home Decorations",childItemHomeDecList))
+        parentRvList.add(CategoryParentRvItem("Groceries",childItemWomenList))
+
     }
 }

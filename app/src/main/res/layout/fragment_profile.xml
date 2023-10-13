@@ -42,8 +42,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/profile_image">
+            android:layout_below="@id/profile_image"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -54,33 +54,34 @@
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/person_icon"
-                    app:tint="@color/primary_green"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/person_icon"
+                    app:tint="@color/primary_green" />
 
                 <TextView
                     android:id="@+id/userName"
                     android:layout_width="@dimen/_165sdp"
                     android:layout_height="wrap_content"
-                    android:text="User Name"
-                    android:fontFamily="@font/poppinsregular"
-                    android:textSize="@dimen/_12ssp"
                     android:layout_gravity="center"
-                    android:singleLine="true"
-                    android:lineSpacingMultiplier="1.8"
+                    android:layout_margin="@dimen/_10sdp"
                     android:ems="10"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:fontFamily="@font/poppinsregular"
+                    android:lineSpacingMultiplier="1.8"
+                    android:singleLine="true"
+                    android:text="User Name"
+                    android:textSize="@dimen/_12ssp" />
 
                 <ImageView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/edit_icon"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/edit_icon" />
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,31 +91,32 @@
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/gender"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/gender" />
 
                 <TextView
                     android:layout_width="@dimen/_165sdp"
                     android:layout_height="wrap_content"
-                    android:text="User Gender"
                     android:layout_gravity="center"
-                    android:singleLine="true"
-                    android:textSize="@dimen/_12ssp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:ems="10"
                     android:fontFamily="@font/poppinsregular"
                     android:lineSpacingMultiplier="1.8"
-                    android:ems="10"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:singleLine="true"
+                    android:text="User Gender"
+                    android:textSize="@dimen/_12ssp" />
 
                 <ImageView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/edit_icon"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/edit_icon" />
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,33 +126,34 @@
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/email_icon"
-                    app:tint="@color/primary_green"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/email_icon"
+                    app:tint="@color/primary_green" />
 
                 <TextView
                     android:id="@+id/userEmail"
                     android:layout_width="@dimen/_165sdp"
                     android:layout_height="wrap_content"
-                    android:text="User Email"
                     android:layout_gravity="center"
-                    android:textSize="@dimen/_12ssp"
-                    android:singleLine="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:ems="10"
                     android:fontFamily="@font/poppinsregular"
                     android:lineSpacingMultiplier="1.8"
-                    android:ems="10"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:singleLine="true"
+                    android:text="User Email"
+                    android:textSize="@dimen/_12ssp" />
 
                 <ImageView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/edit_icon"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/edit_icon" />
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -160,33 +163,34 @@
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/phone_no_icon"
-                    app:tint="@color/primary_green"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/phone_no_icon"
+                    app:tint="@color/primary_green" />
 
                 <TextView
                     android:id="@+id/userPhone"
                     android:layout_width="@dimen/_165sdp"
                     android:layout_height="wrap_content"
-                    android:text="User Phone No."
                     android:layout_gravity="center"
-                    android:textSize="@dimen/_12ssp"
-                    android:singleLine="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:ems="10"
                     android:fontFamily="@font/poppinsregular"
                     android:lineSpacingMultiplier="1.8"
-                    android:ems="10"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:singleLine="true"
+                    android:text="User Phone No."
+                    android:textSize="@dimen/_12ssp" />
 
                 <ImageView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/edit_icon"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/edit_icon" />
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -196,33 +200,34 @@
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/location_icon"
-                    app:tint="@color/primary_green"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/location_icon"
+                    app:tint="@color/primary_green" />
 
                 <TextView
                     android:id="@+id/userAddress"
                     android:layout_width="@dimen/_165sdp"
                     android:layout_height="wrap_content"
-                    android:text="User Address"
                     android:layout_gravity="center"
-                    android:textSize="@dimen/_12ssp"
-                    android:singleLine="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:ems="10"
                     android:fontFamily="@font/poppinsregular"
                     android:lineSpacingMultiplier="1.8"
-                    android:ems="10"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:singleLine="true"
+                    android:text="User Address"
+                    android:textSize="@dimen/_12ssp" />
 
                 <ImageView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/edit_icon"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/edit_icon" />
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -232,44 +237,38 @@
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/credit_card_icon"
-                    app:tint="@color/primary_green"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/credit_card_icon"
+                    app:tint="@color/primary_green" />
 
                 <TextView
                     android:id="@+id/userCard"
                     android:layout_width="@dimen/_165sdp"
                     android:layout_height="wrap_content"
-                    android:text="User Credit Card"
                     android:layout_gravity="center"
-                    android:textSize="@dimen/_12ssp"
-                    android:singleLine="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:ems="10"
                     android:fontFamily="@font/poppinsregular"
                     android:lineSpacingMultiplier="1.8"
-                    android:ems="10"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:singleLine="true"
+                    android:text="User Credit Card"
+                    android:textSize="@dimen/_12ssp" />
 
                 <ImageView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/edit_icon"
                     android:layout_gravity="center"
-                    android:layout_margin="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/edit_icon" />
 
 
             </LinearLayout>
 
 
-
-
-
         </LinearLayout>
 
     </RelativeLayout>
-
-
-
 
 
 </ScrollView>

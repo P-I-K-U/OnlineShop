@@ -20,24 +20,20 @@
     </FrameLayout>
 
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:backgroundTint="@color/white"
+        app:elevation="0dp"
+        app:itemIconTint="@drawable/custom_bottom_colour"
+        app:itemRippleColor="@color/white"
+        app:itemTextColor="@drawable/custom_bottom_colour"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemIconTint="@drawable/custom_bottom_colour"
-        app:itemTextColor="@drawable/custom_bottom_colour"
-        app:menu="@menu/bottom_menu"
-        app:elevation="0dp"
-        app:itemRippleColor="@color/white" />
-
-
-
+        app:menu="@menu/bottom_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
