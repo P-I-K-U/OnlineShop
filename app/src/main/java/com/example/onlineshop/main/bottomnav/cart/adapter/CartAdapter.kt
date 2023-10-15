@@ -1,4 +1,4 @@
-package com.example.onlineshop.main.bottomnav.cart.model
+package com.example.onlineshop.main.bottomnav.cart.adapter
 
 import android.view.LayoutInflater
 import android.view.View

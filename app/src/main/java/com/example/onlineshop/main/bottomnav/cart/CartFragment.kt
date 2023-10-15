@@ -1,6 +1,5 @@
 package com.example.onlineshop.main.bottomnav.cart
 
-import android.os.Binder
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.FragmentCartBinding
 import com.example.onlineshop.main.bottomnav.cart.data.CartRvItem
-import com.example.onlineshop.main.bottomnav.cart.model.CartAdapter
+import com.example.onlineshop.main.bottomnav.cart.adapter.CartAdapter
 
 class CartFragment : Fragment() {
 
