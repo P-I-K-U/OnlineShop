@@ -5,56 +5,73 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.onlineshop.R
+import com.example.onlineshop.databinding.FragmentHomeBinding
+import com.example.onlineshop.main.bottomnav.home.adapter.ParentAdapter
+import com.example.onlineshop.main.bottomnav.home.data.Banner
+import com.example.onlineshop.main.bottomnav.home.data.ChildRecyclerItems
+import com.example.onlineshop.main.bottomnav.home.data.DataItemType
+import com.example.onlineshop.main.bottomnav.home.data.ParentDataItems
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
+    private lateinit var binding: FragmentHomeBinding
+    private lateinit var mList: ArrayList<ParentDataItems>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    ): View {
+        binding = FragmentHomeBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //Home Rv Code....
+        binding.parentRV.setHasFixedSize(true)
+        binding.parentRV.layoutManager = LinearLayoutManager(binding.root.context)
+        mList = ArrayList()
+        addDataToHome()
+        val adapter = ParentAdapter(mList)
+        binding.parentRV.adapter = adapter
+
+
+    }
+
+    private fun addDataToHome() {
+
+        //List for Best Sele
+        val bestSellerList = ArrayList<ChildRecyclerItems>()
+        bestSellerList.add(ChildRecyclerItems(R.drawable.best_sale1, "Up To 20% Off"))
+        bestSellerList.add(ChildRecyclerItems(R.drawable.best_sale2, "Up To 50% Off"))
+        bestSellerList.add(ChildRecyclerItems(R.drawable.best_sale3, "Up To 70% Off"))
+        bestSellerList.add(ChildRecyclerItems(R.drawable.img3, "Up To 15% Off"))
+        bestSellerList.add(ChildRecyclerItems(R.drawable.img1, "Up To 10% Off"))
+        bestSellerList.add(ChildRecyclerItems(R.drawable.img5, "Up To 20% Off"))
+
+        //List For Daily Sale
+
+        val dailySaleList = ArrayList<ChildRecyclerItems>()
+        dailySaleList.add(ChildRecyclerItems(R.drawable.img4, "Up To 60% Off"))
+        dailySaleList.add(ChildRecyclerItems(R.drawable.img1, "Up To 60% Off"))
+        dailySaleList.add(ChildRecyclerItems(R.drawable.img2, "Up To 60% Off"))
+        dailySaleList.add(ChildRecyclerItems(R.drawable.img3, "Up To 60% Off"))
+
+
+
+        mList.add(ParentDataItems(DataItemType.BEST_SELLER, bestSellerList))
+        mList.add((ParentDataItems(DataItemType.BANNER, Banner(R.drawable.sale_img1))))
+        mList.add(ParentDataItems(DataItemType.DAILY_SELLER, dailySaleList))
+        mList.add((ParentDataItems(DataItemType.BANNER, Banner(R.drawable.offer_sale))))
+        mList.add(ParentDataItems(DataItemType.BEST_SELLER, bestSellerList.reversed()))
+        mList.add((ParentDataItems(DataItemType.BANNER, Banner(R.drawable.offer_sale))))
+
+
+
+
     }
 }
